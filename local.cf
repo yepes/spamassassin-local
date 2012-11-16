@@ -1,4 +1,4 @@
-report_safe 0
+areport_safe 0
 rewrite_header	subject *****SPAM*****
 required_score	6
 header CHX_SUBJECT_1 Subject =~ /notes from last week/i
