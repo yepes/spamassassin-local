@@ -1,0 +1,156 @@
+report_safe 0
+rewrite_header	subject *****SPAM*****
+required_score	6
+header CHX_SUBJECT_1 Subject =~ /notes from last week/i
+score CHX_SUBJECT_1 4
+header CHX_SUBJECT_2 Subject =~ /(reloj|watch)/i
+score CHX_SUBJECT_2 1.0
+header CHX_SUBJECT_3 Subject =~ /commercial payment/i
+score CHX_SUBJECT_3 3
+header CHX_SUBJECT_4 Subject =~ /euro im Monat/i
+score CHX_SUBJECT_4 4 
+header CHX_SUBJECT_5  Subject =~ /casino/i
+score CHX_SUBJECT_5 1.1
+header CHX_SUBJECT_6 Subject =~ / resume /i
+score CHX_SUBJECT_6 1
+header CHX_SUBJECT_7 Subject =~ /lonely report/i
+score CHX_SUBJECT_7 1
+header CHX_SUBJECT_8 Subject =~ /1SJ/i
+score CHX_SUBJECT_8 6
+header CHX_SUBJECT_9 Subject =~ /a sus clientes y asegure su solvencia/i
+score CHX_SUBJECT_9 4
+header CHX_SUBJECT_10 Subject =~ /crisis financiera de europa es .* principio/i
+score CHX_SUBJECT_10 1
+header CHX_SUBJECT_11 Subject =~ /LinkedIn.*(Alert|messages|communication|update)/i
+score CHX_SUBJECT_11 1.1
+header CHX_SUBJECT_12 Subject =~ /website(.*)pharmacy/i
+score CHX_SUBJECT_12 5
+header CHX_SUBJECT_13 Subject =~ /FreeDating/i
+score CHX_SUBJECT_13 5
+header CHX_SUBJECT_14 Subject =~ /DatingForSigles/i
+score CHX_SUBJECT_14 5
+
+header CHX_AMAYA_SUBJECT_1 Subject =~ /Three simple steps,/i
+score CHX_AMAYA_SUBJECT_1 2
+
+body CHX_AMAYA_1 /Think itself, money is necessary to your family/i
+score CHX_AMAYA_1 6
+
+body CHX1_RESUME  /new resume is attached/i
+body CHX_BODY_1 /i saw your profile/i
+body CHX_BODY_2 /(bestoffer\-eu\.com|mejor\-trabajo\.com|trabajo\-europa\.com|good\-task\.com|kbs\-gb\.com|usa\-kbs\.com|el\-trabajo\.com|union\-group|es\-wug|centro\-espana\espana\-wg|resum\-europe\.com)/i
+meta CHX_RULES (__CHX1_RESUME||__CHX_BODY_1||__CHX_BODY_2)
+score CHX_RULES 5
+describe CHX_RULES Palabras comunes en el body
+body CHX_BODY_10  /unsere Zeitmesser haben genaue Mechanismen/i
+score CHX_BODY_10 1.2
+body CHX_BODY_11  /For a moment the awful gaze he bent upon Aquila seemed to show that the gentler/i
+score CHX_BODY_11 3.2
+body CHX_BODY_12  /dofidy\.htm/i
+score CHX_BODY_12 4
+rawbody CHX_BODY_13  /\.ru\//i
+score CHX_BODY_13 2
+rawbody CHX_BODY_14  /\.su\//i
+score CHX_BODY_14 2
+body CHX_BODY_16  /chronometer von populaeren/i
+score CHX_BODY_16 1.2
+body CHX_BODY_17  /forex21ad\.com/i
+score CHX_BODY_17 1.2
+body CHX_BODY_18  /Mit unseren Analogen von Schweizer/i
+score CHX_BODY_18 5
+body CHX_BODY_19  /pez gordo mirada/i
+score CHX_BODY_19 6
+body CHX_BODY_20  /sexy girl and i like chat online/i
+score CHX_BODY_20 6
+
+body AMAYA_BODY_1 /comunicamos a todos os Parceiros/
+score AMAYA_BODY_1 7
+
+body CHX_BODY_20  /(reloj.*|barato.*|compr.*|replica.*|lujo|crono){3}/i
+score CHX_BODY_20 1.5
+rawbody CHX_BODY_21  /bit\.ly/i
+score CHX_BODY_21 0.5
+body CHX_BODY_22  /(horn.*|girl.*){2}/i
+score CHX_BODY_22 0.5
+body CHX_BODY_23  /profile .* you are pretty much cute .* \:\)/i
+score CHX_BODY_23 5.5
+body CHX_SUBJECT_24  /(replica.*|lujo.*){2}/i
+score CHX_SUBJECT_24 2 
+rawbody CHX_BODY_24  /azeemfcc\.(\.biz|\.org|\.com|\net)/i
+score CHX_BODY_24 4
+rawbody CHX_BODY_25 /casino/i
+score CHX_BODY_25 0.4
+rawbody	CHX_BODY_25 /el reino que nunca duerme/i
+score CHX_BODY_25 1.5
+rawbody	CHX_BODY_26 /my pic with you/i
+score CHX_BODY_26 1.5
+body CHX_BODY_27  /(reloj.*|barato.*|compr.*|replica.*|lujo.*){4,}/i
+score CHX_BODY_27 1.5
+body CHX_BODY_28 /replica/i
+score CHX_BODY_28 1.2
+body CHX_BODY_29 /decbilbecx\.in/i
+score CHX_BODY_29 6
+body CHX_BODY_30 /t r a b j \. n e t/i
+score CHX_BODY_30 7.0
+body CHX_SUBJECT_25  /ingreso adicional .* al mes/i
+score CHX_SUBJECT_25 4
+mimeheader  __CHX_RESUME  Content-Disposition =~ /filename\=\"(resume|letter)\.htm.*\"/i 
+meta CHX_ATTACH (_CHX_RESUME)
+score CHX_ATTACH 6
+describe CHX_ATTACH Reglas personalizadas para ficheros adjuntos
+header __CHX_HELO Subject =~ /^hello$/i
+meta CHX_SUBJECT (__CHX_HELO)
+score CHX_SUBJECT 5.5
+header _CHX_HELO2 Subject =~ /^FWD: RV: hello$/i
+score _CHX_HELO2 5.5
+describe CHX_SUBJECT Reglas personalizadas subject
+uri __NEWMAIL /newmail\.ru\/ixobuxi\.htm/
+uri __SOZOB /sozob\.goglobalinthe\.ru/
+uri __EXE /\.exe/
+meta CHX_URI (__NEWMAIL||__SOZOB||__EXE)
+score CHX_URI 6
+describe CHX_URI Reglas URL
+header __FROM_1 From =~ /v(i|\|)agra/i
+header __FROM_2 From =~ /sex/i
+meta CHX_FROM (__FROM_1)
+score CHX_FROM  4.5
+meta CHX_FROM_2 (__FROM_2)
+header FROM_3 From =~ /pharmacy/i
+header FROM_4 From =~ /LinkedIn.*(Alert|messages|communication|update)/i
+score FROM_3 1.1
+score FROM_4 1.5
+score CHX_FROM_2 2
+score TVD_SPACE_RATIO 0
+score DOS_OE_TO_MX 0
+score FH_HOST_EQ_DYNAMICIP 0.4
+header __LI_FROM From =~ /linked|itunes/i
+rawbody __LI_BODY /\.info/i
+meta LI (__LI_FROM && __LI_BODY)
+score LI 3 
+score SUBJ_ALL_CAPS 0.1
+score HTML_IMAGE_RATIO_04 0.1
+score HTML_IMAGE_ONLY_04 0.1
+score HTML_IMAGE_ONLY_08 0.1
+score HTML_IMAGE_ONLY_12 0.1
+score HTML_IMAGE_ONLY_16 0.1
+score HTML_IMAGE_ONLY_20 0.1
+score HTML_IMAGE_ONLY_24 0.1
+score HTML_IMAGE_ONLY_28 0.1
+score HTML_IMAGE_ONLY_32 0.1
+score UPPERCASE_25_50 0.1
+score UPPERCASE_50_75 0.1
+score UPPERCASE_75_100 0.1
+score SHORT_HELO_AND_INLINE_IMAGE 0.1
+score FUZZY_AMBIEN_BODY 0.1
+score BAD_ENC_HEADER 0.1
+score HELO_DYNAMIC_IPADDR2 1
+score HELO_DYNAMIC_SPLIT_IP 1
+score HELO_OEM 1
+score HELO_LOCALHOST 1
+rawbody MYA_1  /gorny\.ru/i
+score MYA_1 7
+rawbody MYA_2  /delrusnn\.ru/i
+score MYA_2 7
+rawbody MYA_3  /mail\.ru/i
+score MYA_1 5
+
