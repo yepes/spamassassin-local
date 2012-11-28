@@ -1,103 +1,173 @@
 report_safe 0
 rewrite_header	subject *****SPAM*****
 required_score	6
+
+########
+#
+#Asuntos
+#
+########
+
 header CHX_SUBJECT_1 Subject =~ /notes from last week/i
 score CHX_SUBJECT_1 4
+
 header CHX_SUBJECT_2 Subject =~ /(reloj|watch)/i
 score CHX_SUBJECT_2 1.0
+
 header CHX_SUBJECT_3 Subject =~ /commercial payment/i
 score CHX_SUBJECT_3 3
+
 header CHX_SUBJECT_4 Subject =~ /euro im Monat/i
 score CHX_SUBJECT_4 4 
+
 header CHX_SUBJECT_5  Subject =~ /casino/i
 score CHX_SUBJECT_5 1.1
+
 header CHX_SUBJECT_6 Subject =~ / resume /i
 score CHX_SUBJECT_6 1
+
 header CHX_SUBJECT_7 Subject =~ /lonely report/i
 score CHX_SUBJECT_7 1
+
 header CHX_SUBJECT_8 Subject =~ /1SJ/i
 score CHX_SUBJECT_8 6
+
 header CHX_SUBJECT_9 Subject =~ /a sus clientes y asegure su solvencia/i
 score CHX_SUBJECT_9 4
+
 header CHX_SUBJECT_10 Subject =~ /crisis financiera de europa es .* principio/i
 score CHX_SUBJECT_10 1
+
 header CHX_SUBJECT_11 Subject =~ /LinkedIn.*(Alert|messages|communication|update)/i
 score CHX_SUBJECT_11 1.1
+
 header CHX_SUBJECT_12 Subject =~ /website(.*)pharmacy/i
 score CHX_SUBJECT_12 5
+
 header CHX_SUBJECT_13 Subject =~ /FreeDating/i
 score CHX_SUBJECT_13 5
+
 header CHX_SUBJECT_14 Subject =~ /DatingForSigles/i
 score CHX_SUBJECT_14 5
 
-header CHX_AMAYA_SUBJECT_1 Subject =~ /Three simple steps,/i
-score CHX_AMAYA_SUBJECT_1 2
+header CHX_SUBJECT_15 Subject =~ /Regarding your Direct Deposit via ACH/i
+score CHX_SUBJECT_15 2
 
-body CHX_AMAYA_1 /Think itself, money is necessary to your family/i
-score CHX_AMAYA_1 6
+header CHX_SUBJECT_16 Subject =~ /Three simple steps,/i
+score CHX_SUBJECT_16 2
 
-body CHX1_RESUME  /new resume is attached/i
-body CHX_BODY_1 /i saw your profile/i
-body CHX_BODY_2 /(bestoffer\-eu\.com|mejor\-trabajo\.com|trabajo\-europa\.com|good\-task\.com|kbs\-gb\.com|usa\-kbs\.com|el\-trabajo\.com|union\-group|es\-wug|centro\-espana\espana\-wg|resum\-europe\.com)/i
-meta CHX_RULES (__CHX1_RESUME||__CHX_BODY_1||__CHX_BODY_2)
-score CHX_RULES 5
-describe CHX_RULES Palabras comunes en el body
+body CHX_SUBJECT_17  /(replica.*|lujo.*){2}/i
+score CHX_SUBJECT_17 2 
+
+
+########
+#
+# Cuerpos de mensjae
+#
+########
+
+body CHX_BODY_1 /Think itself, money is necessary to your family/i
+score CHX_BODY_1 6
+
+body CHX_BODY_2 /comunicamos a todos os Parceiros/
+score CHX_BODY_2 7
+
 body CHX_BODY_10  /unsere Zeitmesser haben genaue Mechanismen/i
 score CHX_BODY_10 1.2
+
 body CHX_BODY_11  /For a moment the awful gaze he bent upon Aquila seemed to show that the gentler/i
 score CHX_BODY_11 3.2
+
 body CHX_BODY_12  /dofidy\.htm/i
 score CHX_BODY_12 4
+
 rawbody CHX_BODY_13  /\.ru\//i
 score CHX_BODY_13 2
+
 rawbody CHX_BODY_14  /\.su\//i
 score CHX_BODY_14 2
+
+body CHX_BODY_15  /(reloj.*|barato.*|compr.*|replica.*|lujo|crono){3}/i
+score CHX_BODY_15 1.5
+
 body CHX_BODY_16  /chronometer von populaeren/i
 score CHX_BODY_16 1.2
+
 body CHX_BODY_17  /forex21ad\.com/i
 score CHX_BODY_17 1.2
+
 body CHX_BODY_18  /Mit unseren Analogen von Schweizer/i
 score CHX_BODY_18 5
+
 body CHX_BODY_19  /pez gordo mirada/i
 score CHX_BODY_19 6
+
 body CHX_BODY_20  /sexy girl and i like chat online/i
 score CHX_BODY_20 6
 
-body AMAYA_BODY_1 /comunicamos a todos os Parceiros/
-score AMAYA_BODY_1 7
-
-body CHX_BODY_20  /(reloj.*|barato.*|compr.*|replica.*|lujo|crono){3}/i
-score CHX_BODY_20 1.5
 rawbody CHX_BODY_21  /bit\.ly/i
 score CHX_BODY_21 0.5
+
 body CHX_BODY_22  /(horn.*|girl.*){2}/i
 score CHX_BODY_22 0.5
+
 body CHX_BODY_23  /profile .* you are pretty much cute .* \:\)/i
 score CHX_BODY_23 5.5
-body CHX_SUBJECT_24  /(replica.*|lujo.*){2}/i
-score CHX_SUBJECT_24 2 
+
+
+
 rawbody CHX_BODY_24  /azeemfcc\.(\.biz|\.org|\.com|\net)/i
 score CHX_BODY_24 4
+
 rawbody CHX_BODY_25 /casino/i
 score CHX_BODY_25 0.4
+
 rawbody	CHX_BODY_25 /el reino que nunca duerme/i
 score CHX_BODY_25 1.5
+
 rawbody	CHX_BODY_26 /my pic with you/i
 score CHX_BODY_26 1.5
+
 body CHX_BODY_27  /(reloj.*|barato.*|compr.*|replica.*|lujo.*){4,}/i
 score CHX_BODY_27 1.5
+
 body CHX_BODY_28 /replica/i
 score CHX_BODY_28 1.2
+
 body CHX_BODY_29 /decbilbecx\.in/i
 score CHX_BODY_29 6
+
 body CHX_BODY_30 /t r a b j \. n e t/i
 score CHX_BODY_30 7.0
-body CHX_SUBJECT_25  /ingreso adicional .* al mes/i
-score CHX_SUBJECT_25 4
+
+body CHX_BODY_31  /ingreso adicional .* al mes/i
+score CHX_BODY_31 4
+
+rawbody CHX_BODY_32 /allstatebizblog\.com/i
+score CHX_BODY_32 5 
+
+
+
+
+
+
+
+body CHX_RESUME_ATTACHED  /new resume is attached/i
+body CHX_BODY_SAW_YOUR_PROFILE /i saw your profile/i
+body CHX_BODY_COMMON_WORDS /(bestoffer\-eu\.com|mejor\-trabajo\.com|trabajo\-europa\.com|good\-task\.com|kbs\-gb\.com|usa\-kbs\.com|el\-trabajo\.com|union\-group|es\-wug|centro\-espana\espana\-wg|resum\-europe\.com)/i
+meta CHX_RULES (__CHX_RESUME_ATTACHED||__CHX_BODY_SAW_YOUR_PROFILE||__CHX_BODY_COMMON_WORDS)
+score CHX_RULES 5
+describe CHX_RULES Palabras comunes en el body
+
+
+
+
+
 mimeheader  __CHX_RESUME  Content-Disposition =~ /filename\=\"(resume|letter)\.htm.*\"/i 
 meta CHX_ATTACH (_CHX_RESUME)
 score CHX_ATTACH 6
 describe CHX_ATTACH Reglas personalizadas para ficheros adjuntos
+
 header __CHX_HELO Subject =~ /^hello$/i
 meta CHX_SUBJECT (__CHX_HELO)
 score CHX_SUBJECT 5.5
@@ -153,4 +223,3 @@ rawbody MYA_2  /delrusnn\.ru/i
 score MYA_2 7
 rawbody MYA_3  /mail\.ru/i
 score MYA_1 5
-
