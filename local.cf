@@ -25,7 +25,7 @@ score CHX_SUBJECT_5 1.1
 
 header CHX_SUBJECT_6 Subject =~ / resume /i
 score CHX_SUBJECT_6 1
-s
+
 header CHX_SUBJECT_7 Subject =~ /lonely report/i
 score CHX_SUBJECT_7 1
 
