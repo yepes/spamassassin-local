@@ -56,7 +56,7 @@ score CHX_SUBJECT_15 2
 header CHX_SUBJECT_16 Subject =~ /Three simple steps,/i
 score CHX_SUBJECT_16 2
 
-header CHX_SUBJECT_18 Subject =~/Zapraszamy do podjecia w wolnym czasie dodatkowej pracy z wynagrodzeniem/i
+header CHX_SUBJECT_18 Subject =~ /Zapraszamy do podjecia w wolnym czasie dodatkowej pracy z wynagrodzeniem/i
 score CHX_SUBJECT_18 6
 
 
