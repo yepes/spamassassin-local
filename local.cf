@@ -25,7 +25,7 @@ score CHX_SUBJECT_5 1.1
 
 header CHX_SUBJECT_6 Subject =~ / resume /i
 score CHX_SUBJECT_6 1
-
+s
 header CHX_SUBJECT_7 Subject =~ /lonely report/i
 score CHX_SUBJECT_7 1
 
@@ -56,8 +56,16 @@ score CHX_SUBJECT_15 2
 header CHX_SUBJECT_16 Subject =~ /Three simple steps,/i
 score CHX_SUBJECT_16 2
 
+header CHX_SUBJECT_18 Subject =~/Zapraszamy do podjecia w wolnym czasie dodatkowej pracy z wynagrodzeniem/i
+score CHX_SUBJECT_18 6
+
+
+
+
 body CHX_SUBJECT_17  /(replica.*|lujo.*){2}/i
 score CHX_SUBJECT_17 2 
+
+
 
 
 ########
