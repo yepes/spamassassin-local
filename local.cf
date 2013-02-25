@@ -157,11 +157,21 @@ score CHX_BODY_32 5
 rawbody CHX_BODY_33 /boncaldos\.com/i
 score CHX_BODY_33 5
 
-#varios tipos de correo que últimamente llegan, tipicos de trackear un paquete.
+#varios tipos de correo que Ãºltimamente llegan, tipicos de trackear un paquete.
 rawbody CHX_BODY_34 /\/wp-content\/plugins\/akismet\/track/i
 score CHX_BODY_34 6
 
+rawbody CHX_BODY_35 /vegu-group/i
+score CHX_BODY_35 6
 
+rawbody CHX_BODY_36 /forge-gruppe/i
+score CHX_BODY_36 6
+
+rawbody CHX_BODY_37 /kiwi-gruppe/i
+score CHX_BODY_37 6
+
+rawbody CHX_BODY_38 /joyfin-group/i
+score CHX_BODY_38 6
 
 
 
