@@ -186,6 +186,10 @@ meta CHX_RULES (__CHX_RESUME_ATTACHED||__CHX_BODY_SAW_YOUR_PROFILE||__CHX_BODY_C
 score CHX_RULES 5
 describe CHX_RULES Palabras comunes en el body
 
+body CHX_ORCAMENTO_28012014 /http://54\.200\.51\.143/Planilhas/Orcamento/i
+score CHX_ORCAMENTO_28012014 7
+describe CHX_ORCAMENTO_28012014 Correo que ha llegado mucho la noche del 28 de enero de 2014
+
 
 
 
