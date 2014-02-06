@@ -217,6 +217,10 @@ body CHX_NFE_06022014 /http:\/\/72\.2\.114\.195/i
 score CHX_NFE_06022014 8
 describe CHX_NFE_06022014 Correo que ha llegado mucho la noche del 4 de febrero de 2014
 
+body CHX_TI_ENVIEI_06022014 /http:\/\/54\.207\.24\.155/i
+score CHX_TI_ENVIEI_06022014 8
+describe CHX_TI_ENVIEI_06022014 Correo que ha llegado mucho la noche del 4 de febrero de 2014
+
 
 
 
