@@ -186,13 +186,36 @@ meta CHX_RULES (__CHX_RESUME_ATTACHED||__CHX_BODY_SAW_YOUR_PROFILE||__CHX_BODY_C
 score CHX_RULES 5
 describe CHX_RULES Palabras comunes en el body
 
+
 body CHX_ORCAMENTO_28012014 /http:\/\/54\.200\.51\.143\/Planilhas\/Orcamento/i
 score CHX_ORCAMENTO_28012014 8
 describe CHX_ORCAMENTO_28012014 Correo que ha llegado mucho la noche del 28 de enero de 2014
 
+
 body CHX_DESPESAS_04022014 /http:\/\/95\.85\.3\.70/i
 score CHX_DESPESAS_04022014 8
 describe CHX_DESPESAS_04022014 Correo que ha llegado mucho la noche del 3 de febrero de 2014
+
+
+body CHX_TRANSTORNOS_06022014 /http:\/\/54\.207\.48\.170/i
+score CHX_TRANSTORNOS_06022014 8
+describe CHX_TRANSTORNOS_06022014 Correo que ha llegado mucho la noche del 4 de febrero de 2014
+
+
+body CHX_RETORNAR_06022014 /http:\/\/95\.85\.56\.18/i
+score CHX_RETORNAR_06022014 8
+describe CHX_RETORNAR_06022014 Correo que ha llegado mucho la noche del 4 de febrero de 2014
+
+
+body CHX_DISCULPA_DEMORA_06022014 /http:\/\/54\.207\.3\.7/i
+score CHX_DISCULPA_DEMORA_06022014 8
+describe CHX_DISCULPA_DEMORA_06022014 Correo que ha llegado mucho la noche del 4 de febrero de 2014
+
+
+
+body CHX_NFE_06022014 /http:\/\/72\.2\.114\.195/i
+score CHX_NFE_06022014 8
+describe CHX_NFE_06022014 Correo que ha llegado mucho la noche del 4 de febrero de 2014
 
 
 
