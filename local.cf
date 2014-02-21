@@ -231,7 +231,7 @@ score CHX_MAYZAUD_COM 8
 describe CHX_MAYZAUD_COM Simula ser un enlace a un pdf
 
 
-body CHX_ORCAMENTO /Orcamento_(1|2)\.zip
+body CHX_ORCAMENTO /Orcamento_2\.zip
 score CHX_ORCAMENTO 4
 describe CHX_ORCAMENTO Muchos mensajes con estos dos adjuntos
 
