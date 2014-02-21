@@ -226,6 +226,20 @@ score CHX_ATT_FINAN 8
 describe CHX_ATT_FINAN Correo que ha llegado mucho la noche del 13 de febrero de 2014
 
 
+body CHX_MAYZAUD_COM /http:\/\/www\.mayzaud\.com\digeronimo\/images
+score CHX_MAYZAUD_COM 8
+describe CHX_MAYZAUD_COM Simula ser un enlace a un pdf
+
+
+body CHX_ORCAMENTO /Orcamento_(1|2)\.zip
+score CHX_ORCAMENTO 4
+describe CHX_ORCAMENTO Muchos mensajes con estos dos adjuntos
+
+
+body CHX_BOLETO_VENCIDO /http:\/\/54\.207\.7\.97/i
+score CHX_BOLETO_VENCIDO 8
+describe CHX_BOLETO_VENCIDO Correo que ha llegado mucho la noche del 21 de febrero de 2014
+
 
 
 mimeheader  __CHX_RESUME  Content-Disposition =~ /filename\=\"(resume|letter)\.htm.*\"/i 
