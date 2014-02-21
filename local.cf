@@ -226,7 +226,7 @@ score CHX_ATT_FINAN 8
 describe CHX_ATT_FINAN Correo que ha llegado mucho la noche del 13 de febrero de 2014
 
 
-body CHX_MAYZAUD_COM /http:\/\/www\.mayzaud\.com\digeronimo\/images
+body CHX_MAYZAUD_COM /http:\/\/www\.mayzaud\.com\/digeronimo\/images
 score CHX_MAYZAUD_COM 8
 describe CHX_MAYZAUD_COM Simula ser un enlace a un pdf
 
