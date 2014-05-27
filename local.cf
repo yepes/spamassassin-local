@@ -243,14 +243,18 @@ describe CHX_BOLETO_VENCIDO Correo que ha llegado mucho la noche del 21 de febre
 
 
 body CHX_GE_TT_4QNvHec1 /http:\/\/ge\.tt\/api\/1\/files\/4QNvHec1\/0/i
-score CHX_GE_TT_4QNvHec1 1
+score CHX_GE_TT_4QNvHec1 7
 describe CHX_GE_TT_4QNvHec1 Correo que ha llegado mucho el 22 de Abril de 2014
 
 
 body CHX_GE_TT_3PrZIgh1 /http:\/\/ge\.tt\/api\/1\/files\/3PrZIgh1/i
-score CHX_GE_TT_3PrZIgh1 1
+score CHX_GE_TT_3PrZIgh1 7
 describe CHX_GE_TT_3PrZIgh1 3PrZIgh1
 
+
+body CHX_GE_TT_31pg0zh1 /http:\/\/ge\.tt\/api\/1\/files\/31pg0zh1/i
+score CHX_GE_TT_31pg0zh1 7
+describe CHX_GE_TT_31pg0zh1 31pg0zh1
 
 
 
