@@ -257,6 +257,31 @@ score CHX_GE_TT_31pg0zh1 7
 describe CHX_GE_TT_31pg0zh1 31pg0zh1
 
 
+body CHX_BIT_LY_1m4btdk /http:\/\/bit\.ly\/1m4btdk/i
+score CHX_BIT_LY_1m4btdk 7
+describe CHX_BIT_LY_1m4btdk 1m4btdk
+
+
+body CHX_CONSTRUCTORAGADAR_COM_AR /http:\/\/bit\.ly\/1m4btdk/i
+score CHX_CONSTRUCTORAGADAR_COM_AR 7
+describe CHX_CONSTRUCTORAGADAR_COM_AR CONSTRUCTORAGADAR_COM_AR
+
+body CHX_BIT_LY_1iirvLZ /https:\/\/bit.ly\/1iirvLZ/i
+score CHX_BIT_LY_1iirvLZ 7
+describe CHX_BIT_LY_1iirvLZ 1iirvLZ
+
+
+
+
+
+
+
+
+
+mimeheader  _ATT_ATT01219  Content-Disposition =~ /filename\=\"ATT01219\.txt\"/i 
+meta CHX_ATTACH (_ATT_ATT01219)
+score CHX_ATTT_ATT01219 6
+describe CHX_ATTT_ATT01219 Adjunto ATT01219
 
 
 
