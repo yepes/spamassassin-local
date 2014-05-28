@@ -278,7 +278,7 @@ describe CHX_BIT_LY_1iirvLZ 1iirvLZ
 
 
 
-mimeheader  _ATT_ATT01219  Content-Disposition =~ /filename\=\"ATT01219\.txt\"/i 
+mimeheader  __ATT_ATT01219  Content-Disposition =~ /filename\=\"ATT01219\.txt\"/i 
 meta CHX_ATTT_ATT01219 (_ATT_ATT01219)
 score CHX_ATTT_ATT01219 6
 describe CHX_ATTT_ATT01219 Adjunto ATT01219
