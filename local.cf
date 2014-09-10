@@ -62,7 +62,7 @@ score CHX_SUBJECT_18 7
 header CHX_SUBJECT_27012014 Subject =~ /Video intimo de Neymar e Bruna Marquezine/i
 score CHX_SUBJECT_27012014 7
 
-header CHX_SUBJECT_10092014 Subject =~ /my new photo ;) /i
+header CHX_SUBJECT_10092014 Subject =~ /my new photo \;\) /i
 score CHX_SUBJECT_10092014 7
 
 
